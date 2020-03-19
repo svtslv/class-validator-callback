@@ -1,6 +1,6 @@
 {
   "name": "class-validator-callback",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ValidateCallback decorator for class-validator",
   "author": "Sviatoslav H",
   "license": "MIT",
