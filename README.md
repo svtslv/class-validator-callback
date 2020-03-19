@@ -26,7 +26,7 @@ npm install class-validator class-validator-callback
   import { validate } from 'class-validator';
   import { ValidateCallback } from 'class-validator-callback';
 
-  class Password {
+  class User {
     @ValidateCallback(
       (object, value) => /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(value), 
       { message: 'Error message for password' }
@@ -40,13 +40,10 @@ npm install class-validator class-validator-callback
     passwordConfirmation: string;
   }
 
-  (async() => {
-    const password = new Password();
-    password.password = 'passW0rd';
-    password.passwordConfirmation = 'passW0rd';
-    const validatePassword = await validate(password);
-    console.log(validatePassword);
-  })();
+  const user = new User();
+  user.password = 'passW0rd';
+  user.passwordConfirmation = 'passW0rd';
+  validate(user).then(errors => console.log(errors));
 ```
 
 ## License
