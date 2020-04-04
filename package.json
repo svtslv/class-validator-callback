@@ -1,6 +1,6 @@
 {
   "name": "class-validator-callback",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ValidateCallback decorator for class-validator",
   "author": "Sviatoslav H",
   "license": "MIT",
@@ -13,7 +13,9 @@
     "callback"
   ],
   "files": [
-    "dist"
+    "dist",
+    "index.js",
+    "index.d.ts"
   ],
   "main": "dist/index.js",
   "scripts": {
